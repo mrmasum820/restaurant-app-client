@@ -22,7 +22,7 @@ const MyCart = () => {
             confirmButtonText: "Yes, delete it!"
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/carts/${item._id}`, {
+                fetch(`https://restaurant-app-server-production.up.railway.app/carts/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -41,7 +41,7 @@ const MyCart = () => {
     }
 
     return (
-        <div className="w-full">
+        <div className="w-full my-10">
             <Helmet>
                 <title>Bistro Boss | My Cart</title>
             </Helmet>

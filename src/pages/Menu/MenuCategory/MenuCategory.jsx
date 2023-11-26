@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const MenuCategory = ({ items, title, img }) => {
     return (
-        <section className="pt-8 mb-16">
+        <section className="pt-8 mb-16 p-4 md:p-0">
             {title && <Cover img={img} title={title}></Cover>}
             <div className="grid md:grid-cols-2 gap-10 mt-16">
                 {

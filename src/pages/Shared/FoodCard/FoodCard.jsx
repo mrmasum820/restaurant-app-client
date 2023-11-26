@@ -15,8 +15,9 @@ const FoodCard = ({ item }) => {
     const handleAddToCart = item => {
         console.log(item);
         const orderItem = { foodMenuId: _id, name, image, price, recipe, email: user.email }
+
         if (user && user.email) {
-            fetch('http://localhost:5000/carts', {
+            fetch('https://restaurant-app-server-production.up.railway.app/carts', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -35,7 +36,6 @@ const FoodCard = ({ item }) => {
                             timer: 1500
                         });
                     }
-
                 })
         }
         else {

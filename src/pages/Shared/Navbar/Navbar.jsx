@@ -36,7 +36,7 @@ const Navbar = () => {
 
         {
             user ? <>
-                <span>{user?.displayName}</span>
+                <p className="mt-[13px]">{user?.displayName}</p>
                 <button onClick={handleLogOut} className="btn btn-ghost">Log out</button>
             </> : <>
                 <li><Link to="/login">Login</Link></li>

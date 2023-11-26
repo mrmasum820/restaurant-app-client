@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom";
-import { FaShoppingCart, FaHome, FaCalendarAlt, FaWallet, FaUsers, FaBook, FaUtensils } from "react-icons/fa";
+import { FaShoppingCart, FaHome, FaWallet, FaUsers, FaBook, FaUtensils } from "react-icons/fa";
 import useCart from "../hooks/useCart";
 import useAdmin from "../hooks/useAdmin";
 
@@ -20,7 +20,7 @@ const Dashborad = () => {
             </div>
 
 
-            <div className="drawer-side bg-[#D1A054]">
+            <div className="drawer-side md:bg-[#D1A054]">
                 <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label>
                 <ul className="menu p-4 w-80 min-h-full">
                     {/* Sidebar content here */}
@@ -35,11 +35,11 @@ const Dashborad = () => {
 
                         </> : <>
                             <li><NavLink to="/dashboard/userhome"><FaHome></FaHome>User Home</NavLink></li>
-                            <li><NavLink to="/reservations"><FaCalendarAlt></FaCalendarAlt>Reservations</NavLink></li>
-                            <li><NavLink to="/history"><FaWallet></FaWallet>Payment History</NavLink></li>
+                            {/* <li><NavLink to="/dashboard/reservations"><FaCalendarAlt></FaCalendarAlt>Reservations</NavLink></li> */}
                             <li><NavLink to='/dashboard/mycart'><FaShoppingCart></FaShoppingCart>My Cart
                                 <span className="badge badge-secondary">+{cart?.length || 0}</span>
                             </NavLink></li>
+                            <li><NavLink to="/dashboard/payment"><FaWallet></FaWallet>Payment History</NavLink></li>
                         </>
                     }
 
@@ -47,7 +47,7 @@ const Dashborad = () => {
                     <div className="divider"></div>
                     <li><NavLink to="/"><FaHome></FaHome>Home</NavLink></li>
                     <li><NavLink to="/menu"><FaHome></FaHome>Our Menu</NavLink></li>
-                    <li><NavLink to="/order"><FaHome></FaHome>Order Food</NavLink></li>
+                    <li><NavLink to="/order/salad"><FaHome></FaHome>Order Food</NavLink></li>
                 </ul>
             </div>
         </div>
