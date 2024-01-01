@@ -9,21 +9,21 @@ import Newsletter from "../Newsletter/Newsletter";
 import ChefRecommends from "../ChefRecommends/ChefRecommends";
 
 const Home = () => {
-    return (
-        <div>
-            <Helmet>
-                <title>Bistro | Home</title>
-            </Helmet>
-            <Banner></Banner>
-            <Category></Category>
-            <Intro></Intro>
-            <PopularMenu></PopularMenu>
-            <Newsletter></Newsletter>
-            <ChefRecommends></ChefRecommends>
-            <Featured></Featured>
-            <Testimonials></Testimonials>
-        </div>
-    );
+  return (
+    <div>
+      <Helmet>
+        <title>Bistro | Home</title>
+      </Helmet>
+      <Banner></Banner>
+      <Category></Category>
+      <Intro></Intro>
+      <PopularMenu></PopularMenu>
+      <Newsletter></Newsletter>
+      <ChefRecommends></ChefRecommends>
+      <Featured></Featured>
+      <Testimonials></Testimonials>
+    </div>
+  );
 };
 
 export default Home;
